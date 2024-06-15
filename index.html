@@ -4,19 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CricScores</title>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <script type="module" src="./firebase.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
 </head>
-<body>
-	<div class="main">
+<body onload="body_loaded()">
+	<div class="main" id="div_main">
 		<div class="heading">
 			<h1 class="heading-item">CricScores</h1>
 		</div>
 		<div class="pages">
-			<div class="page" id="btn_watch">
-				<text>Watch</text>
+			<div class="page" id="btn_watch" onclick="watch_clicked()">
+				<text class="text">Watch</text>
 			</div>
-			<div class="page" id="btn_score">
-				<text>Score</text>
+			<div class="page" id="btn_score" onclick="score_clicked()">
+				<text class="text">Score</text>
 			</div>
+		</div>
+	</div>
+	<div class="error-screen" id="div_error" hidden>
+		<div class="error-message">
+			<text class="error-text">This Web Application is designed for Mobile and is not intended for Desktop or Laptop browsers. In order to use the website, please browse using a smartphone.</text>
+		</div>
+	</div>
+	<div class="dev-screen" id="div-dev" hidden>
+		<div class="dev-message">
+			<text class="dev-text">This Web Application is under development and currently not available for usage. Please try after some time.</text>
 		</div>
 	</div>
 </body>
